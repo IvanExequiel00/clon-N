@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { BellRing, Search } from "lucide-react";
+import { Logo } from "../../Logo";
 
 
 export  function NavBarDesktop() {
@@ -8,7 +9,7 @@ export  function NavBarDesktop() {
       <div className="px-[4%] mx-auto h-full">
         <div className="flex gap-4 justify-between h-full items-center">
           <div className="flex gap-2 items-center">
-            <p>Logo</p>
+            <Logo />
             <div className="ml-10 flex gap-4 ">
               <p>home</p>
               <p>Movies</p>
