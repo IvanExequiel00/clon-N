@@ -19,6 +19,9 @@ export  function NavBarDesktop() {
           <div className="flex gap-4 items-center">
           <Search className="cursor-pointer"/>
           <BellRing  className="cursor-pointer"/>
+          <div className="flex gap-2 items-center">
+        <p>Users</p>
+          </div>
           </div>
         </div>
       </div>
