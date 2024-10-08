@@ -1,4 +1,5 @@
 import { NavBarDesktop } from "./NavBarDesktop"
+import { NavBarMovile } from "./NavBarMovile"
 
 
 const NavBar = () => {
@@ -8,7 +9,7 @@ const NavBar = () => {
             <NavBarDesktop />
         </div>
         <div className="md:hidden ">
-            <p>Navbar Movile</p>
+            <NavBarMovile />
         </div>
     </nav>
   )
