@@ -1,8 +1,10 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
+import NavBar from "@/components/shared/Navbar/NavBar";
 
 export default function Home() {
   return (
-    <Button>button</Button>
+    <div className="relative bg-zinc-900">
+      <NavBar />
+    </div>
   );
 }
