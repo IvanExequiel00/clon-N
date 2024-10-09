@@ -4,19 +4,20 @@ import { BellRing, Search } from "lucide-react";
 import { Logo } from "../../Logo";
 import { itemsNavbar } from "@/data/items-navbar";
 import Link from "next/link";
-import { useScroolPosition } from "@/hooks/useScroolPosition";
+import { useScrollPosition } from "@/hooks/useScroolPosition";
 interface NavbarItem {
   name: string;
   link: string;
 }
 
 export function NavBarDesktop() {
-  const scrollPosition = useScroolPosition();
+  const scrollPosition = useScrollPosition();
+  console.log(scrollPosition)
   
   return (
     <div
       className={cn(
-        "z-30 left-0 right-0 top-0 h-16 fixed w-full transition-all duration-300",
+        "z-30 left-0 right-0 top-0 h-16 fixed w-full transition-all duration-300 bg-white ",
         scrollPosition > 20 ? "bg-black" : "bg-transparent"
       )}
     >
