@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { Checkbox } from "@/components/ui/checkbox"
-import { Terms } from './terms'
+import { Terms } from '../components/terms'
 import { LoginForm } from './loginform'
 
 export default function LoginPage() {
