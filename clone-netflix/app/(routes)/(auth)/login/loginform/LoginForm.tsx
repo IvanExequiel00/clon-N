@@ -17,13 +17,14 @@ import { Button } from "@/components/ui/button"
 import { formSchema } from "./LoginForm.form"
 import { useState } from "react"
 import { FormError } from "./formError"
-
+import { login } from "@/actions/login"
+import { toast } from "@/hooks/use-toast"
 
 
 
 export  function LoginForm() {
   const [error, setError] = useState<string | undefined>("")
- // 1. Define your form.
+
  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -31,10 +32,20 @@ export  function LoginForm() {
       password: "",
     },
   })
-  const onSubmit =(values: z.infer<typeof formSchema>) => {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    
+    try {
+      login(values).then((data) =>{
+        setError(data?.error)
+        if(data?.success){
+          toast({
+            title: "Login correctamente"
+          });
+        }
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return  (
