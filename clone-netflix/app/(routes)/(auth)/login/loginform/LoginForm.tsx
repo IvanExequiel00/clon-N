@@ -19,10 +19,12 @@ import { useState } from "react"
 import { FormError } from "./formError"
 import { login } from "@/actions/login"
 import { toast } from "@/hooks/use-toast"
+import { useRouter } from "next/navigation"
 
 
 
 export  function LoginForm() {
+  const router = useRouter();
   const [error, setError] = useState<string | undefined>("")
 
  const form = useForm<z.infer<typeof formSchema>>({
@@ -43,6 +45,7 @@ export  function LoginForm() {
           });
         }
       })
+      router.push("/profiles")
     } catch (error) {
       console.log(error)
     }
