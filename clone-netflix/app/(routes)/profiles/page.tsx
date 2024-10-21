@@ -1,7 +1,7 @@
 import { db } from "@/lib/db";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-// import { Profiles } from "./components/Profiles";
+import { Profiles } from "./components/Profile";
 
 export default async function ProfilePage() {
   const session = await auth();
@@ -10,11 +10,11 @@ export default async function ProfilePage() {
     redirect("/login");
   }
 
-//   const userNetflix = await db.userNetflix.findMany({
-//     where: {
-//       userId: session?.user?.id,
-//     },
-//   });
+  const userNetflix = await db.userNetflix.findMany({
+    where: {
+      userId: session?.user?.id,
+    },
+  });
 
   return (
     <div className="h-full flex flex-col justify-center items-center bg-zinc-900">
@@ -22,7 +22,7 @@ export default async function ProfilePage() {
         <h1 className="text-5xl mb-8">¿Quién eres? Elige tu perfil</h1>
       </div>
 
-      {/* <Profiles users={userNetflix} /> */}
+      <Profiles users={userNetflix} />
     </div>
   );
 }
