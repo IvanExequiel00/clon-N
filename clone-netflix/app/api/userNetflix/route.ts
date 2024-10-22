@@ -25,3 +25,21 @@ export async function POST(req: Request) {
 
     return NextResponse.json(userCreated);
 }
+
+export async function DELETE(req: Request) {
+    const user = await currentUser();
+    if(!user) {
+        return new NextResponse("Unauthorized", {status: 401})
+    }
+    const {userNetflix} = await req.json();
+
+    if(!userNetflix) {
+        return new NextResponse("id is required", {status: 400})
+    }
+
+    const userDeleted = await db.userNetflix.delete({
+        where:{
+            id: userNetflix,
+        }
+    })
+}
