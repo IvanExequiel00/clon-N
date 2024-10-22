@@ -40,6 +40,7 @@ export async function DELETE(req: Request) {
     const userDeleted = await db.userNetflix.delete({
         where:{
             id: userNetflix,
-        }
-    })
+        },
+    });
+return NextResponse.json(userDeleted)
 }
