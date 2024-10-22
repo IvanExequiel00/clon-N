@@ -8,10 +8,7 @@ export default function Home() {
       <NavBar />
       <SliderVideo />
 
-      <div className="h-screen">1a</div>
-      <div className="h-screen">a</div>
-      <div className="h-screen">a</div>
-      <div className="h-screen">a</div>
+    
     </div>
   );
 }
