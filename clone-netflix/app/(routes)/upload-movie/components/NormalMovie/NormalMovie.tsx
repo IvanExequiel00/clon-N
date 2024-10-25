@@ -2,14 +2,20 @@
 import { Button } from "@/components/ui/button";
 import { Upload } from "lucide-react";
 import { useState } from "react";
-
+import axios from "axios";
+import { dataMovies } from "./NormalMovie.data";
+import { toast } from "@/hooks/use-toast";
 
 export  function NormalMovie() {
      const [IsLoading, setIsLoading] = useState(false)
     const uploadMovie = async () =>{
+
         setIsLoading(true)
         try {
-
+            await axios.post("/api/create-movies",{
+                movies: dataMovies
+            })
+            toast({title:"Peliculas subidas con exito"});
             setIsLoading(false)
         } catch (error) {
             console.log(error)
