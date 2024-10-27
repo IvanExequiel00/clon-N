@@ -1,5 +1,6 @@
 import { Logo } from "@/components/shared/Logo";
 import { NormalMovie } from "./components/NormalMovie";
+import { TrandingMovies } from "./components/TrandingMovies";
 
 
 export default function UploadMoviesPage() {
@@ -12,9 +13,7 @@ export default function UploadMoviesPage() {
         </h1>
         <div className="max-w-2xl mx-auto grid grid-cols-2 gap-4 ">
             <NormalMovie />
-                <p>
-                    Populares
-                </p>
+                <TrandingMovies />
 
         </div>
     </div>
