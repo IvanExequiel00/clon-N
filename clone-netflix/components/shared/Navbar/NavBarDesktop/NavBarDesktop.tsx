@@ -5,12 +5,13 @@ import { Logo } from "../../Logo";
 import { itemsNavbar } from "@/data/items-navbar";
 import Link from "next/link";
 import { useScrollPosition } from "@/hooks/useScroolPosition";
+import { NavbarDesktopProps } from "./NavBarDesktop.type";
 interface NavbarItem {
   name: string;
   link: string;
 }
 
-export function NavBarDesktop() {
+export function NavBarDesktop(props: NavbarDesktopProps) {
   const scrollPosition = useScrollPosition();
   console.log(scrollPosition)
   

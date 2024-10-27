@@ -7,10 +7,11 @@ import {
 } from "@/components/ui/sheet"
 import { itemsNavbar } from "@/data/items-navbar";
 import Link from "next/link";
+import { NavbarProps } from "./NavBarMovile.type";
 
 
 
-export  function NavBarMovile() {
+export  function NavBarMovile(props: NavbarProps) {
   return (
     <div className="p-4 flex justify-between">
       <Logo />
