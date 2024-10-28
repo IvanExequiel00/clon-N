@@ -6,6 +6,7 @@ import { itemsNavbar } from "@/data/items-navbar";
 import Link from "next/link";
 import { useScrollPosition } from "@/hooks/useScroolPosition";
 import { NavbarDesktopProps } from "./NavBarDesktop.type";
+import { SelectorProfiles } from "../../SelectorProfiles";
 interface NavbarItem {
   name: string;
   link: string;
@@ -14,7 +15,7 @@ interface NavbarItem {
 export function NavBarDesktop(props: NavbarDesktopProps) {
   const scrollPosition = useScrollPosition();
   console.log(scrollPosition)
-  
+  const {users} = props
   return (
     <div
       className={cn(
@@ -38,7 +39,7 @@ export function NavBarDesktop(props: NavbarDesktopProps) {
             <Search className="cursor-pointer" />
             <BellRing className="cursor-pointer" />
             <div className="flex gap-2 items-center">
-              <p>Users</p>
+              <SelectorProfiles users={users}/>
             </div>
           </div>
         </div>

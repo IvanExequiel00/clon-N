@@ -11,7 +11,7 @@ const NavBar = (props: NavbarProps) => {
             <NavBarDesktop users={users}/>
         </div>
         <div className="md:hidden ">
-            <NavBarMovile />
+            <NavBarMovile users={users}/>
         </div>
     </nav>
   )
