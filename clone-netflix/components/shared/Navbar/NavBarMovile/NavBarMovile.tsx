@@ -8,10 +8,12 @@ import {
 import { itemsNavbar } from "@/data/items-navbar";
 import Link from "next/link";
 import { NavbarProps } from "./NavBarMovile.type";
+import { SelectorProfiles } from "../../SelectorProfiles";
 
 
 
 export  function NavBarMovile(props: NavbarProps) {
+  const {users} = props
   return (
     <div className="p-4 flex justify-between">
       <Logo />
@@ -32,7 +34,7 @@ export  function NavBarMovile(props: NavbarProps) {
       <div className="flex justify-between gap-6 mt-4">
           <Search  className="cursor-pointer"/>
           <BellRing className="cursor-pointer"/>
-          <p>User</p>
+          <SelectorProfiles users={users}/>
         </div> 
   </SheetContent>
 </Sheet>

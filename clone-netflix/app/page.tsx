@@ -4,7 +4,6 @@ import { db } from "@/lib/db";
 
 import { auth } from "@/auth";
 
-
 import { TrendingMovies } from "./(routes)/(home)/components/TrendingMovies";
 import { ListMovies } from "./(routes)/(home)/components/ListMovies";
 import { SliderVideo } from "./(routes)/(home)/components/sliderVideo";
