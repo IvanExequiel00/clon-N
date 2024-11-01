@@ -5,7 +5,7 @@ import { ActionsButtonsFilm } from "@/components/shared/ActionsButtonsFilm";
 
 import { InfoExtraFilmProps } from "./InfoExtraFilm.types";
 import { ChaptersInfo } from "@/components/shared/ChaptersInfo/ChaptersInfo";
-import { FilmGenres } from "@/components/Shared/FilmGenres";
+import { FilmGenres } from "@/components/shared/FilmGenres";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
