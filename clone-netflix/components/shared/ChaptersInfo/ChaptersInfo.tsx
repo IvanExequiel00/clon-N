@@ -3,7 +3,7 @@ import { ChaptersInfoProps } from "./ChaptersInfo.types";
 
 export function ChaptersInfo(props: ChaptersInfoProps) {
   const { age, duration } = props;
-  //comit para que se vea el cambio
+
   const colorByAge = (age: string) => {
     if (age === "0") {
       return "bg-green-500";
