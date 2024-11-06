@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 import { auth } from "@/auth";
 
 import { TrendingMovies } from "./(routes)/(home)/components/TrendingMovies";
-// import { ListMovies } from "./(routes)/(home)/components/ListMovies";
+ import { ListMovies } from "./(routes)/(home)/components/ListMovies";
 import { SliderVideo } from "./(routes)/(home)/components/sliderVideo";
 import NavBar from "@/components/shared/Navbar/NavBar";
 
@@ -32,7 +32,7 @@ export default async function Home() {
       <NavBar users={usersNetflix} />
       <SliderVideo />
       <TrendingMovies movies={trendingMovies} />
-      {/* <ListMovies movies={movies} /> a*/}
+       {/* <ListMovies movies={movies} /> */}
     </div>
   );
 }
