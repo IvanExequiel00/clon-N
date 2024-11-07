@@ -9,6 +9,7 @@ import {
     CarouselPrevious,
   } from "@/components/ui/carousel"
 import Image from 'next/image'
+import { ActionsButtons } from './ActionsButtons'
 
 export  function CarouselMovie(props: CarouselMovieProps) {
     const {movies, isMyList} = props
@@ -34,7 +35,7 @@ duration-300 z-10 invisible sm:visible delay-300 w-full
     <Image src={movie.thumbnailUrl} alt='movie' width={200} height={200} 
     className='cursor-pointer object-cover transition-all duration-300  shadow-xl w-full rounded-t-lg'/>
     <div className='p-2 shadow-lg'>
-      <p>Action buttons</p>
+      <ActionsButtons movieId={movie.id} movie={movie} isMyList={isMyList}/>
 
     </div>
 
