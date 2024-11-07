@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import { ActionsButtonsProps } from "./ActionsButtons.types";
-import { Play, X } from "lucide-react";
+import { Play, ThumbsUp, X } from "lucide-react";
 
 export  function ActionsButtons(props: ActionsButtonsProps) {
     const {movieId, movie, isMyList} = props
@@ -23,7 +23,13 @@ export  function ActionsButtons(props: ActionsButtonsProps) {
                 h-3 w-3 hover:text-zinc-900"/>
             </Button>
         ):(
-            <Button>No esta en mi lista</Button>
+            <Button size={"icon"} variant={"ghost"} className="bg-zinc-900 border-gray-400 
+            border-2 rounded-full flex items-center justify-center 
+            h-7 w-7">
+            <ThumbsUp  width={10} height={10} 
+            className="text-slate-50 fill-zinc-900 
+                h-3 w-3 hover:text-zinc-900"/>
+            </Button>
         )}
         </div>
     </div>
