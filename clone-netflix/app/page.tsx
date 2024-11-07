@@ -32,7 +32,7 @@ export default async function Home() {
       <NavBar users={usersNetflix} />
       <SliderVideo />
       <TrendingMovies movies={trendingMovies} />
-       {/* <ListMovies movies={movies} /> */}
+        <ListMovies movies={movies} /> 
     </div>
   );
 }
