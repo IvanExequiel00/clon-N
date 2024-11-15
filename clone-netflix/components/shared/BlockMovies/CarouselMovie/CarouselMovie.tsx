@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import { ActionsButtons } from "./ActionsButtons";
+import { ChaptersInfo } from "./ChaptersInfo";
 
 export function CarouselMovie(props: CarouselMovieProps) {
   const { movies, isMyList } = props;
@@ -48,6 +49,7 @@ duration-300 z-10 invisible sm:visible delay-300 w-full
                       movie={movie}
                       isMyList={isMyList}
                     />
+                    <ChaptersInfo age={movie.age} duration={movie.duration}/>
                   </div>
                 </div>
               </CardContent>
