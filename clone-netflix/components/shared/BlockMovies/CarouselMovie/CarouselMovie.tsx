@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { ActionsButtons } from "./ActionsButtons";
 import { ChaptersInfo } from "./ChaptersInfo";
+import { FilmGenres } from "./FilmGenres";
 
 export function CarouselMovie(props: CarouselMovieProps) {
   const { movies, isMyList } = props;
@@ -50,6 +51,7 @@ duration-300 z-10 invisible sm:visible delay-300 w-full
                       isMyList={isMyList}
                     />
                     <ChaptersInfo age={movie.age} duration={movie.duration}/>
+                    <FilmGenres genres={movie.genre}/>
                   </div>
                 </div>
               </CardContent>
