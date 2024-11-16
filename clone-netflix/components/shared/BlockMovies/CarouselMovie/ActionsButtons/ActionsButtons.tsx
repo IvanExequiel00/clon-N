@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { ActionsButtonsProps } from "./ActionsButtons.types";
 import { ChevronDown, Play, ThumbsUp, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useLovedFilms } from "@/hooks/use-loved-films";
 
 export  function ActionsButtons(props: ActionsButtonsProps) {
-    const {movieId, movie, isMyList} = props
+    const {movieId, movie, isMyList} = props;
+    const {addLovedFilm, removeLovedItem, lovedFilmsByUser} = useLovedFilms();
 
 
     const router = useRouter();
@@ -14,11 +16,11 @@ export  function ActionsButtons(props: ActionsButtonsProps) {
     }
 
 const onAddToMyList = () =>{
-    console.log("a")
+    addLovedFilm(movie)
 }
 
 const onRemoveFromMyList = () =>{
-    console.log("a")
+    removeLovedItem(movieId)
 }
 
   return (
