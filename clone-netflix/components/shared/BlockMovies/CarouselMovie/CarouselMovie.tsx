@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { CarouselMovieProps } from "./CarouselMovie.types";
+import Image from "next/image";
+
 import {
   Carousel,
   CarouselContent,
@@ -7,16 +7,20 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+
 import { ActionsButtons } from "./ActionsButtons";
 import { ChaptersInfo } from "./ChaptersInfo";
+
+import { CarouselMovieProps } from "./CarouselMovie.types";
 import { FilmGenres } from "./FilmGenres";
 
 export function CarouselMovie(props: CarouselMovieProps) {
   const { movies, isMyList } = props;
+
   return (
-    <Carousel className="w-full ">
-      <CarouselContent className="-ml-1 gap-2 overflow-inherit">
+    <Carousel className="w-full">
+      <CarouselContent className="-ml-1 gap-2 overflow-inherit ">
         {movies.map((movie) => (
           <CarouselItem
             key={movie.id}
@@ -25,24 +29,25 @@ export function CarouselMovie(props: CarouselMovieProps) {
             <Card className="cursor-pointer transition delay-300 group relative">
               <CardContent className="flex aspect-video items-center justify-center p-6 relative border-none rounded-md bg-zinc-900">
                 <Image
+                  src={movie.thumbnailUrl}
+                  alt="Image"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="rounded-md"
-                  src={movie.thumbnailUrl}
-                  alt="Image"
                 />
                 <div
                   className="opacity-0 absolute top-0 transition-all 
-duration-300 z-10 invisible sm:visible delay-300 w-full
- bg-zinc-900 rounded-lg scale-0 group-hover:lg:scale-125 
-  group-hover:md:scale-150 group-hover:-translate-y-[5vw] group-hover:opacity-100"
+                  duration-300 z-10 invisible sm:visible delay-300
+                    w-full bg-zinc-900 rounded-lg scale-0 
+                    group-hover:lg:scale-125 group-hover:md:scale-150
+                    group-hover:-translate-y-[5vw] group-hover:opacity-100                "
                 >
                   <Image
                     src={movie.thumbnailUrl}
-                    alt="movie"
+                    alt="Movie"
                     width={200}
                     height={200}
-                    className="cursor-pointer object-cover transition-all duration-300  shadow-xl w-full rounded-t-lg"
+                    className="cursor-pointer object-cover transition-all duration-300 shadow-xl w-full rounded-t-lg"
                   />
                   <div className="p-2 shadow-lg">
                     <ActionsButtons
@@ -50,8 +55,10 @@ duration-300 z-10 invisible sm:visible delay-300 w-full
                       movie={movie}
                       isMyList={isMyList}
                     />
-                    <ChaptersInfo age={movie.age} duration={movie.duration}/>
-                    <FilmGenres genres={movie.genre}/>
+
+                    <ChaptersInfo age={movie.age} duration={movie.duration} />
+
+                    <FilmGenres genres={movie.genre} />
                   </div>
                 </div>
               </CardContent>
