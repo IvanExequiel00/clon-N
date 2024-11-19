@@ -12,7 +12,7 @@ interface NavbarItem {
   link: string;
 }
 
-export function NavbarDesktop(props: NavbarDesktopProps) {
+export function NavBarDesktop(props: NavbarDesktopProps) {
   const scrollPosition = useScrollPosition();
   console.log(scrollPosition)
   const {users} = props
