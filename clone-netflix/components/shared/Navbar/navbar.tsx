@@ -3,7 +3,7 @@ import { NavBarDesktop } from "./NavBarDesktop"
 import { NavBarMovile } from "./NavBarMovile"
 
 
-const NavBar = (props: NavbarProps) => {
+const NavBarAll = (props: NavbarProps) => {
   const {users} = props
   return (
     <nav>
@@ -17,4 +17,4 @@ const NavBar = (props: NavbarProps) => {
   )
 }
 
-export default NavBar
+export default NavBarAll;
