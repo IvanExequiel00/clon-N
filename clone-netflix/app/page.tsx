@@ -10,6 +10,7 @@ import { SliderVideo } from "./(routes)/(home)/components/sliderVideo";
 import { Navbar } from "@/components/shared/Navbar";
 
 
+
 export default async function Home() {
   const session = await auth();
 
