@@ -3,18 +3,17 @@ import React from 'react'
 import { Checkbox } from "@/components/ui/checkbox"
 import { Terms } from '../components/terms'
 import { LoginForm } from './loginform'
-import { auth } from '@/auth'
+
 
 
 
 export default async function LoginPage() {
-  const session = await auth();
+
 
   return (
     <div>
       <p className='text-3xl font-bold text-left mb-7'>Iniciar Sesion</p>
 
-      <p>Sesssion: {JSON.stringify(session)}</p>
       <LoginForm />
       <div className='mt-5 text-center'>
       <Link href="/" className='hover:underline hover:opacity-70'>
