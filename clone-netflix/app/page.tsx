@@ -7,7 +7,7 @@ import { auth } from "@/auth";
 import { TrendingMovies } from "./(routes)/(home)/components/TrendingMovies";
  import { ListMovies } from "./(routes)/(home)/components/ListMovies";
 import { SliderVideo } from "./(routes)/(home)/components/sliderVideo";
-import { Navbar } from "@/components/shared/Navbar";
+import { NavBar } from "@/components/shared/Navbar";
 
 
 
@@ -31,7 +31,7 @@ export default async function Home() {
 
   return (
     <div className="relative bg-zinc-900">
-      <Navbar users={usersNetflix} />
+      <NavBar users={usersNetflix} />
       <SliderVideo />
       
       <TrendingMovies movies={trendingMovies} />

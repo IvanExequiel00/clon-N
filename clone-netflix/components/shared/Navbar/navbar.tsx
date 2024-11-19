@@ -3,7 +3,7 @@ import { NavBarMovile } from "./NavBarMovile";
 
 import { NavbarProps } from "./NavBar.type";
 
-export function Navbar(props: NavbarProps) {
+export function NavBar(props: NavbarProps) {
   const { users } = props;
 
   return (
