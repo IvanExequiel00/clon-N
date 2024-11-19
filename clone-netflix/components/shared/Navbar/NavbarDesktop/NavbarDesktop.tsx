@@ -8,10 +8,6 @@ import { cn } from "@/lib/utils";
 import { itemsNavbar } from "@/data/items-navbar";
 import { useScrollPosition } from "@/hooks/useScroolPosition";
 
-
-
-
-
 import { Logo } from "../../Logo";
 import { SelectorProfiles } from "../../SelectorProfiles";
 import { NavbarDesktopProps } from "./NavbarDesktop.types";
