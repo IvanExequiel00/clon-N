@@ -1,7 +1,7 @@
 import { NavBarDesktop } from "./NavBarDesktop";
 import { NavBarMovile } from "./NavBarMovile";
 
-import { NavbarProps } from "./NavBar.type";
+import { NavbarProps } from "./NavBar.types";
 
 export function NavBar(props: NavbarProps) {
   const { users } = props;
