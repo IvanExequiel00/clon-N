@@ -7,7 +7,8 @@ import { auth } from "@/auth";
 import { TrendingMovies } from "./(routes)/(home)/components/TrendingMovies";
  import { ListMovies } from "./(routes)/(home)/components/ListMovies";
 import { SliderVideo } from "./(routes)/(home)/components/sliderVideo";
-import NavBarAll from "@/components/shared/Navbar/NavBar";
+import { Navbar } from "@/components/shared/Navbar";
+
 
 export default async function Home() {
   const session = await auth();
@@ -29,7 +30,7 @@ export default async function Home() {
 
   return (
     <div className="relative bg-zinc-900">
-      <NavBarAll users={usersNetflix} />
+      <Navbar users={usersNetflix} />
       <SliderVideo />
       
       <TrendingMovies movies={trendingMovies} />
