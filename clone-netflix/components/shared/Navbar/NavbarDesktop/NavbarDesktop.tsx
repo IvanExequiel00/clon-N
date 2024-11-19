@@ -8,12 +8,13 @@ import { cn } from "@/lib/utils";
 import { itemsNavbar } from "@/data/items-navbar";
 import { useScrollPosition } from "@/hooks/useScroolPosition";
 
-// import { SelectorProfile } from "@/components/Shared/SelectorProfiles";
 
 
-import { NavbarDesktopProps } from "./NavbarDesktop.types";
+
+
 import { Logo } from "../../Logo";
 import { SelectorProfiles } from "../../SelectorProfiles";
+import { NavbarDesktopProps } from "./NavbarDesktop.types";
 
 export function NavbarDesktop(props: NavbarDesktopProps) {
   const { users } = props;
