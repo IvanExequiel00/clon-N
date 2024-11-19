@@ -1,5 +1,6 @@
 import { db } from '@/lib/db'
 import React from 'react'
+import { redirect } from 'next/navigation'
 
 export default async function MovieIdPage({params,}: {
   params: {movieId: string}
@@ -15,7 +16,18 @@ export default async function MovieIdPage({params,}: {
     }
   })
 
-  if(!movieFilm || !popularMovie) return null;
+  if(!movieFilm || !popularMovie) {
+    redirect("/")
+  }
+
+  const currentMovie = movieFilm 
+  ? movieFilm.movieVideo 
+  : popularMovie 
+  ? popularMovie.movieVideo 
+  : "";
+
+  const titleMovie = movieFilm ? movieFilm.title : popularMovie ? popularMovie.title : "";
+
   return (
     <div>MovieIdPage</div>
   )
